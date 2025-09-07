@@ -79,7 +79,7 @@ cd ResumeCraft
 
 5. Build & Deploy
   - **Client**
-  - npm run build
+    - npm run build
 
 - **Server**
   - npm start
