@@ -15,7 +15,7 @@ const verifyToken = async (req, res, next) => {
 
         const user = await User.findById(decoded.userId).select('-password');
         if (!user) {
-            return res.statu(401).json({ success: false, message: 'Unauthorized - User not found'});
+            return res.status(401).json({ success: false, message: 'Unauthorized - User not found'});
         }
 
         req.user = user;
