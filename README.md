@@ -50,8 +50,8 @@ cd ResumeCraft
 ```
 ### 2. Install dependencies:
 - **Client**
-- cd client
-- npm install
+  - cd client
+  - npm install
 
 - **Server**
 - cd ../server
