@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Save } from "lucide-react";
 import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
@@ -11,6 +12,7 @@ import { useResumeContext } from "../../context/useResumeContext";
 import useResumeStore from "../../stores//useResumeStore";
 
 const EditInfo = () => {
+  const { resumeId } = useParams();
   const { resume, loading } = useResumeContext();
   const { updateResume } = useResumeStore();
   const [page, setPage] = useState(1);
@@ -27,7 +29,7 @@ const EditInfo = () => {
   };
 
   const handleSave = () => {
-    updateResume(resume);
+    updateResume(resumeId, resume);
   };
 
   const handleResumePrint = () => {

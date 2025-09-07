@@ -62,7 +62,7 @@ export const updateResume = async (req, res) => {
         return res.status(404).json({ success: false, message: 'Resume not Found' });
     }
 
-    if (!resume.userId.equals(userId)) {
+    if (!userId.equals(resume.userId)) {
         return res.status(400).json({ success: false, message: 'Access Denied' });
     }
 
@@ -83,16 +83,22 @@ export const updateResume = async (req, res) => {
 
 export const deleteResume = async (req, res) => {
     try {
+        const userId = req.user._id;
         const { resumeId } = req.params;
         if (!resumeId) {
             return res.status(400).json({ success: false, message: 'Resume id required' });
         }
 
-        const deletedResume = await Resume.findByIdAndDelete(resumeId);
-        if (!deletedResume) {
+        const resume = await Resume.findById(resumeId);
+        if (!resume) {
             return res.status(404).json({ success: false, message: 'Resume not found' });
         }
 
+        if (!userId.equals(resume.userId)) {
+            return res.status(400).json({ success: false, message: 'Access Denied' });
+        }
+
+        await Resume.findByIdAndDelete(resumeId);
         res.status(200).json({ success: true, message: 'Resume Deleted' });
     } catch (error) {
         res.status(500).json({ success: false, message: error.message });

@@ -37,10 +37,10 @@ const useResumeStore = create((set) => ({
         }
     },
 
-    updateResume: async (updates) => {
+    updateResume: async (resumeId, updates) => {
         set({ loading: true });
         try {
-            const res = await axiosUrl.put(`/resume/${updates._id}`, updates);
+            const res = await axiosUrl.put(`/resume/${resumeId}`, updates);
             if (res.data.success) {
                 const updatedResume = res.data.resume;
 
