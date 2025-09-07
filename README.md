@@ -54,32 +54,32 @@ cd ResumeCraft
   - npm install
 
 - **Server**
-- cd ../server
-- npm install
+  - cd ../server
+  - npm install
 
 ### 3. Environment Variables:
 - **Client**
-- VITE_BACKEND_URL=your_url
+  - VITE_BACKEND_URL=your_url
 
 - **Server**
-- PORT=your_port
-- MONGO_DB_URI=your_mongodb_connection_string
-- NODE_ENV=development
-- CLIENT_URL=your_url
-- JWT_SECRET=your_jwt_secret
+  - PORT=your_port
+  - MONGO_DB_URI=your_mongodb_connection_string
+  - NODE_ENV=development
+  - CLIENT_URL=your_url
+  - JWT_SECRET=your_jwt_secret
 
 4. Run in Development
 - **Run Server**
-- cd server
-- npm run dev
+  - cd server
+  - npm run dev
 
 - **Run Client**
-- cd ../client
-- npm run dev
+  - cd ../client
+  - npm run dev
 
 5. Build & Deploy
-- **Client**
-- npm run build
+  - **Client**
+  - npm run build
 
 - **Server**
-- npm start
+  - npm start
