@@ -38,3 +38,48 @@ Built with **MERN + Vite + Tailwind** for a modern, responsive experience.
 **Deployment**  
 - Frontend → Vercel  
 - Backend → Render   
+
+---
+
+## ⚙️ Setup Instructions 
+
+### 1️. Clone the repo
+```bash
+git clone https://github.com/Ranajit305/ResumeCraft.git
+cd ResumeCraft
+```
+2. Install dependencies:
+# Client
+- cd client
+- npm install
+
+# Server
+- cd ../server
+- npm install
+
+3. Environment Variables:
+# Client
+- VITE_BACKEND_URL=your_url
+
+# Backend
+- PORT=your_port
+- MONGO_DB_URI=your_mongodb_connection_string
+- NODE_ENV=development
+- CLIENT_URL=your_url
+- JWT_SECRET=your_jwt_secret
+
+4. Run in Development
+# Run backend
+- cd server
+- npm run dev
+
+# Run frontend
+- cd ../client
+- npm run dev
+
+5. Build & Deploy
+# Client
+- npm run build
+
+# Server
+- npm start
