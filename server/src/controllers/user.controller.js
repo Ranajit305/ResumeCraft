@@ -11,11 +11,12 @@ const generateToken = (userId, res) => {
         });
 
         res.cookie('jwt', token, {
-            maxAge: 7 * 24 * 60 * 60 * 1000,
-            httpOnly: true,
-            sameSite: 'strict',
-            secure: process.env.NODE_ENV === 'production'
-        })
+          maxAge: 7 * 24 * 60 * 60 * 1000,
+          httpOnly: true,
+          sameSite: 'none',   // allow cross-site
+          secure: process.env.NODE_ENV === 'production', // true in prod, false in dev
+      });
+
     } catch (error) {
         console.log(`Error in generating Token: ${error.message}`);
     }
