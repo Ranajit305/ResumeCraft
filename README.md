@@ -49,19 +49,19 @@ git clone https://github.com/Ranajit305/ResumeCraft.git
 cd ResumeCraft
 ```
 ### 2. Install dependencies:
-# Client
+- ** Client **
 - cd client
 - npm install
 
-# Server
+- ** Server **
 - cd ../server
 - npm install
 
 ### 3. Environment Variables:
-# Client
+- ** Client **
 - VITE_BACKEND_URL=your_url
 
-# Backend
+- ** Server **
 - PORT=your_port
 - MONGO_DB_URI=your_mongodb_connection_string
 - NODE_ENV=development
@@ -69,17 +69,17 @@ cd ResumeCraft
 - JWT_SECRET=your_jwt_secret
 
 4. Run in Development
-# Run backend
+- ** Run Server **
 - cd server
 - npm run dev
 
-# Run frontend
+- ** Run Client **
 - cd ../client
 - npm run dev
 
 5. Build & Deploy
-# Client
+- ** Client **
 - npm run build
 
-# Server
+- ** Server **
 - npm start
