@@ -21,22 +21,9 @@ const useAuthStore = create((set) => ({
     },
 
     register: async (name, email, password) => {
+        set({ loading: true });
         try {
-            const res = axiosUrl.post('/user/register', { name, email, password });
-            if (res.data.success) {
-                set({ user: res.data.user });
-                toast.success(res.data.message);
-            }
-        } catch (error) {
-            toast.dismiss();
-            toast.error(error.response.data.message);
-        }
-    },
-
-    login: async (email, password) => {
-        try {
-            const res = await axiosUrl.post('/user/login', { email, password });
-            console.log(res);
+            const res = await axiosUrl.post('/user/register', { name, email, password });
             if (res.data.success) {
                 set({ user: res.data.user });
                 toast.success(res.data.message);
@@ -46,6 +33,26 @@ const useAuthStore = create((set) => ({
             toast.dismiss();
             toast.error(error.response.data.message);
             return false;
+        } finally {
+            set({ loading: false });
+        }
+    },
+
+    login: async (email, password) => {
+        set({ loading: true });
+        try {
+            const res = await axiosUrl.post('/user/login', { email, password });
+            if (res.data.success) {
+                set({ user: res.data.user });
+                toast.success(res.data.message);
+                return true;
+            }
+        } catch (error) {
+            toast.dismiss();
+            toast.error(error.response.data.message);
+            return false;
+        } finally {
+            set({ loading: false });
         }
     },
 

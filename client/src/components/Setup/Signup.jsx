@@ -11,8 +11,10 @@ const Signup = ({ setType }) => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    await register(name, email, password);
-    setType("");
+    const result = await register(name, email, password);
+    if (result) {
+      setType("");
+    }
   };
 
   return (
