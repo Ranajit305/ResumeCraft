@@ -48,7 +48,7 @@ Built with **MERN + Vite + Tailwind** for a modern, responsive experience.
 git clone https://github.com/Ranajit305/ResumeCraft.git
 cd ResumeCraft
 ```
-2. Install dependencies:
+### 2. Install dependencies:
 # Client
 - cd client
 - npm install
@@ -57,7 +57,7 @@ cd ResumeCraft
 - cd ../server
 - npm install
 
-3. Environment Variables:
+### 3. Environment Variables:
 # Client
 - VITE_BACKEND_URL=your_url
 
