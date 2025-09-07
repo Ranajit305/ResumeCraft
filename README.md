@@ -21,6 +21,37 @@ Built with **MERN + Vite + Tailwind** for a modern, responsive experience.
 
 ---
 
+## 🖼️ Screenshots  
+
+1. **Dashboard**  
+   ![Dashboard](./Pictures/Dashboard.png)  
+
+2. **Personal Info**  
+   ![Personal Info](./Pictures/PersonalInfo.png)  
+
+3. **Contact Info**  
+   ![Contact Info](./Pictures/ContactInfo.png)  
+
+4. **Experience Info**  
+   ![Experience Info](./Pictures/ExperienceInfo.png)  
+
+5. **Education Info**  
+   ![Education Info](./Pictures/EducationInfo.png)  
+
+6. **Additional Info**  
+   ![Additional Info](./Pictures/AdditionalInfo.png)  
+
+7. **Projects Info**  
+   ![Projects Info](./Pictures/ProjectsInfo.png)  
+
+8. **Certifications Info**  
+   ![Certifications Info](./Pictures/CertificationsInfo.png)  
+
+9. **Resume Download**  
+   ![Download](./Pictures/Download.png)  
+
+---
+
 ## 🛠️ Tech Stack  
 
 **Frontend**  
